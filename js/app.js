@@ -227,14 +227,14 @@ class View {
                 </form>
             </div>
         `;
-        
+
         document.body.appendChild(modal);
-        
+
         // Focus en el input
         setTimeout(() => {
             document.getElementById('username').focus();
         }, 100);
-        
+
         return modal;
     }
 
@@ -269,17 +269,16 @@ class View {
 
     showNotification(message, type = 'success') {
         const notification = document.createElement('div');
-        notification.className = `fixed top-20 right-4 p-4 rounded-lg shadow-lg z-50 transition-all duration-300 transform translate-x-full ${
-            type === 'success' ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
-        }`;
+        notification.className = `fixed top-20 right-4 p-4 rounded-lg shadow-lg z-50 transition-all duration-300 transform translate-x-full ${type === 'success' ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+            }`;
         notification.textContent = message;
-        
+
         document.body.appendChild(notification);
-        
+
         setTimeout(() => {
             notification.classList.remove('translate-x-full');
         }, 100);
-        
+
         setTimeout(() => {
             notification.classList.add('translate-x-full');
             setTimeout(() => {
@@ -390,10 +389,10 @@ class View {
                 </div>
             </div>
         `;
-        
+
         this.elements.main.innerHTML = paradigmsHTML;
         this.elements.main.classList.add('page-transition');
-        
+
         // Agregar event listeners
         this.setupExampleButtons();
         this.setupDetailButtons();
@@ -474,9 +473,9 @@ class View {
                 </div>
             </section>
         `;
-        
+
         this.elements.main.innerHTML = homeHTML;
-        
+
         // Re-setup event listener for start button
         const startBtn = document.getElementById('startBtn');
         if (startBtn) {
@@ -549,9 +548,9 @@ class View {
                 </div>
             </div>
         `;
-        
+
         this.elements.main.innerHTML = detailHTML;
-        
+
         // Setup event listeners
         const backBtn = document.getElementById('backToParadigms');
         if (backBtn) {
@@ -559,7 +558,7 @@ class View {
                 this.renderParadigmsPage();
             });
         }
-        
+
         const exampleBtn = document.querySelector('.example-btn');
         if (exampleBtn) {
             exampleBtn.addEventListener('click', (e) => {
@@ -595,15 +594,15 @@ class View {
                 </div>
             </div>
         `;
-        
+
         document.body.appendChild(modal);
-        
+
         // Cerrar modal
         const closeBtn = modal.querySelector('#closeExamples');
         closeBtn.addEventListener('click', () => {
             document.body.removeChild(modal);
         });
-        
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 document.body.removeChild(modal);
@@ -1096,7 +1095,7 @@ public class ReactiveTemperatureSystem {
                 ]
             }
         };
-        
+
         return examples[paradigm] || { title: 'Paradigma no encontrado', description: '', codes: [] };
     }
 }
@@ -1125,18 +1124,18 @@ class Controller {
         }
 
         const modal = this.view.showLoginModal();
-        
+
         const form = modal.querySelector('#loginForm');
         const cancelBtn = modal.querySelector('#cancelLogin');
-        
+
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const username = document.getElementById('username').value.trim();
-            
+
             if (username) {
                 const submitBtn = form.querySelector('button[type="submit"]');
                 this.view.showLoading(submitBtn);
-                
+
                 try {
                     const user = await this.model.login(username);
                     this.view.updateLoginButton(true, user.username);
@@ -1149,11 +1148,11 @@ class Controller {
                 }
             }
         });
-        
+
         cancelBtn.addEventListener('click', () => {
             this.view.hideModal(modal);
         });
-        
+
         // Cerrar modal al hacer clic fuera
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
@@ -1168,7 +1167,7 @@ class Controller {
             this.handleLogin();
             return;
         }
-        
+
         this.model.setCurrentPage('paradigms');
         this.view.renderParadigmsPage();
         this.view.showNotification('¡Comenzando la exploración!');
