@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradigmas de Programación - Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="notebook-bg min-h-screen">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold handwriting text-blue-800">Paradigmas de Programación by jhonas</h1>
+                <div class="flex items-center space-x-4">
+                    <a href="#home" class="nav-link typewriter hover:text-blue-600 transition-colors">Inicio</a>
+                    <a href="#about" class="nav-link typewriter hover:text-blue-600 transition-colors">Acerca</a>
+                    <button id="loginBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                        Iniciar Sesión
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="home" class="container mx-auto px-4 py-16 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-6xl handwriting text-blue-900 mb-6 animate-fade-in">
+                    Paradigmas de Programación 
+                </h1>
+                <p class="text-xl typewriter text-gray-700 mb-8 leading-relaxed">
+                    Explora el fascinante mundo de los diferentes enfoques de programación. 
+                    Desde la programación estructurada hasta la reactiva, descubre cómo cada paradigma 
+                    moldea la forma en que pensamos y escribimos código.
+                </p>
+                <button id="startBtn" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Comenzar Exploración
+                </button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container mx-auto px-4 py-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl handwriting text-blue-900 mb-8 text-center">Sobre este Blog</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white/70 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-2xl handwriting text-blue-800 mb-4">Nuestra Misión</h3>
+                        <p class="typewriter text-gray-700 leading-relaxed">
+                            Hacer accesible el conocimiento sobre paradigmas de programación a través de 
+                            explicaciones claras, ejemplos prácticos y un diseño que inspire el aprendizaje.
+                        </p>
+                    </div>
+                    <div class="bg-white/70 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-2xl handwriting text-blue-800 mb-4">¿Qué Encontrarás?</h3>
+                        <ul class="typewriter text-gray-700 space-y-2">
+                            <li>• Programación Estructurada</li>
+                            <li>• Programación Orientada a Objetos</li>
+                            <li>• Programación Funcional</li>
+                            <li>• Programación Reactiva</li>
+                            <li>• Ejemplos prácticos y comparaciones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl handwriting mb-4">Paradigmas de Programación</h3>
+                    <p class="typewriter text-blue-200">
+                        Tu guía completa para entender los diferentes enfoques de programación.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl handwriting mb-4">Enlaces Rápidos</h3>
+                    <ul class="typewriter space-y-2">
+                        <li><a href="#home" class="text-blue-200 hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#about" class="text-blue-200 hover:text-white transition-colors">Acerca</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl handwriting mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-200 hover:text-white transition-all duration-300 transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white transition-all duration-300 transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white transition-all duration-300 transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center">
+                <p class="typewriter text-blue-200">&copy; 2025 Paradigmas de Programación. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Datos de paradigmas
+        const paradigmsData = [
+            { id: 'structured', name: 'Programación Estructurada', description: 'Paradigma que utiliza estructuras de control bien definidas.', color: 'blue' },
+            { id: 'oop', name: 'Programación Orientada a Objetos', description: 'Paradigma basado en objetos que encapsulan datos y comportamientos.', color: 'green' },
+            { id: 'functional', name: 'Programación Funcional', description: 'Enfoque basado en funciones matemáticas, evitando cambios de estado.', color: 'purple' },
+            { id: 'reactive', name: 'Programación Reactiva', description: 'Paradigma orientado a flujos de datos asincrónicos.', color: 'red' },
+            { id: 'procedural', name: 'Programación Procedural', description: 'Paradigma basado en procedimientos y funciones.', color: 'indigo' },
+            { id: 'declarative', name: 'Programación Declarativa', description: 'Describe qué se quiere lograr sin especificar cómo.', color: 'pink' },
+            { id: 'imperative', name: 'Programación Imperativa', description: 'Describe cómo realizar tareas paso a paso.', color: 'yellow' },
+            { id: 'logic', name: 'Programación Lógica', description: 'Basada en lógica formal, usando hechos y reglas.', color: 'teal' },
+            { id: 'concurrent', name: 'Programación Concurrente', description: 'Para ejecutar múltiples procesos simultáneamente.', color: 'orange' },
+            { id: 'event-driven', name: 'Programación Orientada a Eventos', description: 'El flujo está determinado por eventos externos.', color: 'cyan' }
+        ];
+
+        // Ejemplos de código
+        const examplesData = {
+            structured: {
+                title: 'Programación Estructurada - Ejemplos',
+                description: 'La programación estructurada utiliza estructuras de control claras y evita el uso de GOTO.',
+                codes: [
+                    {
+                        title: 'Ejemplo en C - Cálculo de Factorial',
+                        code: `#include <stdio.h>
+
+int factorial(int n) {
+    int resultado = 1;
+    
+    // Estructura de control: bucle for
+    for (int i = 1; i <= n; i++) {
+        resultado *= i;
+    }
+    
+    return resultado;
+}
+
+int main() {
+    int numero = 5;
+    
+    // Estructura de control: condicional
+    if (numero >= 0) {
+        printf("Factorial de %d es %d\\n", 
+               numero, factorial(numero));
+    } else {
+        printf("Error: número negativo\\n");
+    }
+    
+    return 0;
+}`,
+                        explanation: 'Este ejemplo muestra el uso de estructuras de control básicas: secuencia, selección (if) e iteración (for).'
+                    }
+                ]
+            },
+            oop: {
+                title: 'Programación Orientada a Objetos - Ejemplos',
+                description: 'La POO organiza el código en objetos que encapsulan datos y comportamientos.',
+                codes: [
+                    {
+                        title: 'Ejemplo en Java - Clase Vehículo',
+                        code: `// Clase base (Herencia)
+public class Vehiculo {
+    // Encapsulación - atributos privados
+    private String marca;
+    private String modelo;
+    private int año;
+    
+    // Constructor
+    public Vehiculo(String marca, String modelo, int año) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
+    }
+    
+    // Métodos públicos (interfaz)
+    public void acelerar() {
+        System.out.println("El vehículo está acelerando");
+    }
+    
+    public void frenar() {
+        System.out.println("El vehículo está frenando");
+    }
+    
+    // Getters y Setters
+    public String getMarca() { return marca; }
+    public String getModelo() { return modelo; }
+}`,
+                        explanation: 'Muestra los pilares de la POO: encapsulación, herencia y polimorfismo en una jerarquía de clases.'
+                    }
+                ]
+            },
+            functional: {
+                title: 'Programación Funcional - Ejemplos',
+                description: 'La programación funcional se basa en funciones puras, inmutabilidad y composición de funciones.',
+                codes: [
+                    {
+                        title: 'Ejemplo en JavaScript - Funciones Puras',
+                        code: `// Función pura - mismo input, mismo output, sin efectos secundarios
+const sumar = (a, b) => a + b;
+
+// Función de orden superior
+const aplicarOperacion = (lista, operacion) => 
+    lista.map(operacion);
+
+// Composición de funciones
+const componer = (f, g) => (x) => f(g(x));
+
+// Funciones puras para transformaciones
+const duplicar = x => x * 2;
+const incrementar = x => x + 1;
+const esPar = x => x % 2 === 0;
+
+// Datos inmutables
+const numeros = [1, 2, 3, 4, 5];
+
+// Transformaciones funcionales
+const numerosDuplicados = numeros.map(duplicar);
+const numerosIncrementados = numeros.map(incrementar);
+const numerosPares = numeros.filter(esPar);
+
+console.log("Original:", numeros);
+console.log("Duplicados:", numerosDuplicados);
+console.log("Pares:", numerosPares);`,
+                        explanation: 'Demuestra funciones puras, inmutabilidad, funciones de orden superior y composición funcional.'
+                    }
+                ]
+            },
+            reactive: {
+                title: 'Programación Reactiva - Ejemplos',
+                description: 'La programación reactiva maneja flujos de datos asincrónicos y propagación automática de cambios.',
+                codes: [
+                    {
+                        title: 'Ejemplo con RxJS - Observables',
+                        code: `import { Observable, fromEvent, map, filter, debounceTime } from 'rxjs';
+
+// Crear un Observable desde eventos del DOM
+const inputElement = document.getElementById('searchInput');
+const searchStream = fromEvent(inputElement, 'input');
+
+// Transformar el stream de eventos
+const searchQuery = searchStream.pipe(
+    map(event => event.target.value),        // Extraer el valor
+    filter(text => text.length > 2),         // Filtrar textos cortos
+    debounceTime(300)                        // Esperar 300ms sin cambios
+);
+
+// Suscribirse al stream
+searchQuery.subscribe(query => {
+    console.log('Buscando:', query);
+    performSearch(query);
+});`,
+                        explanation: 'Muestra cómo RxJS maneja streams de eventos, transformaciones reactivas y suscripciones a flujos de datos.'
+                    }
+                ]
+            },
+            procedural: {
+                title: 'Programación Procedural - Ejemplos',
+                description: 'La programación procedural organiza el código en procedimientos y funciones reutilizables.',
+                codes: [
+                    {
+                        title: 'Ejemplo en C - Sistema de Gestión',
+                        code: `#include <stdio.h>
+#include <string.h>
+
+// Estructura de datos
+struct Estudiante {
+    int id;
+    char nombre[50];
+    float promedio;
+};
+
+// Procedimientos para manejar estudiantes
+void inicializar_estudiante(struct Estudiante* est, int id, char* nombre, float promedio) {
+    est->id = id;
+    strcpy(est->nombre, nombre);
+    est->promedio = promedio;
+}
+
+void mostrar_estudiante(struct Estudiante est) {
+    printf("ID: %d, Nombre: %s, Promedio: %.2f\\n", 
+           est.id, est.nombre, est.promedio);
+}
+
+int main() {
+    struct Estudiante estudiante;
+    inicializar_estudiante(&estudiante, 1, "Ana García", 8.5);
+    mostrar_estudiante(estudiante);
+    return 0;
+}`,
+                        explanation: 'Demuestra la organización del código en procedimientos que operan sobre estructuras de datos.'
+                    }
+                ]
+            },
+            declarative: {
+                title: 'Programación Declarativa - Ejemplos',
+                description: 'La programación declarativa describe qué se quiere lograr sin especificar cómo hacerlo.',
+                codes: [
+                    {
+                        title: 'Ejemplo en SQL - Consultas Declarativas',
+                        code: `-- Obtener empleados del departamento de Desarrollo
+SELECT nombre, salario 
+FROM empleados 
+WHERE departamento = 'Desarrollo';
+
+-- Calcular salario promedio por departamento
+SELECT departamento, AVG(salario) as salario_promedio
+FROM empleados 
+GROUP BY departamento;
+
+-- Encontrar empleados con salario mayor al promedio
+SELECT nombre, salario
+FROM empleados 
+WHERE salario > (SELECT AVG(salario) FROM empleados);`,
+                        explanation: 'SQL es declarativo: especificamos qué datos queremos obtener, y el motor de base de datos decide cómo ejecutar la consulta.'
+                    }
+                ]
+            },
+            imperative: {
+                title: 'Programación Imperativa - Ejemplos',
+                description: 'La programación imperativa describe paso a paso cómo realizar las tareas.',
+                codes: [
+                    {
+                        title: 'Ejemplo en Python - Algoritmo de Ordenamiento',
+                        code: `def ordenamiento_burbuja(lista):
+    """Implementación imperativa del algoritmo de ordenamiento burbuja."""
+    n = len(lista)
+    
+    # Bucle externo: controla el número de pasadas
+    for i in range(n):
+        # Flag para optimización
+        intercambio = False
+        
+        # Bucle interno: compara elementos adyacentes
+        for j in range(0, n - i - 1):
+            # Instrucción condicional explícita
+            if lista[j] > lista[j + 1]:
+                # Intercambio explícito paso a paso
+                temp = lista[j]
+                lista[j] = lista[j + 1]
+                lista[j + 1] = temp
+                intercambio = True
+        
+        # Si no hubo intercambios, la lista ya está ordenada
+        if not intercambio:
+            break
+    
+    return lista
+
+# Uso
+numeros = [64, 34, 25, 12, 22, 11, 90]
+print("Original:", numeros)
+numeros_ordenados = ordenamiento_burbuja(numeros.copy())
+print("Ordenados:", numeros_ordenados)`,
+                        explanation: 'Este ejemplo muestra programación imperativa: cada paso está explícitamente definido, con control total sobre el flujo de ejecución.'
+                    }
+                ]
+            },
+            logic: {
+                title: 'Programación Lógica - Ejemplos',
+                description: 'La programación lógica usa hechos y reglas para resolver problemas mediante inferencia.',
+                codes: [
+                    {
+                        title: 'Ejemplo en Prolog - Sistema Familiar',
+                        code: `% Hechos básicos sobre relaciones familiares
+padre(juan, maria).
+padre(juan, pedro).
+padre(pedro, ana).
+padre(pedro, luis).
+
+madre(lucia, maria).
+madre(lucia, pedro).
+madre(maria, ana).
+madre(maria, luis).
+
+% Reglas lógicas
+% Una persona es progenitor si es padre o madre
+progenitor(X, Y) :- padre(X, Y).
+progenitor(X, Y) :- madre(X, Y).
+
+% Definición de hermano/hermana
+hermano(X, Y) :- 
+    progenitor(Z, X), 
+    progenitor(Z, Y), 
+    X \\= Y.
+
+% Definición de abuelo
+abuelo(X, Y) :- 
+    padre(X, Z), 
+    progenitor(Z, Y).
+
+% Consultas que se pueden hacer:
+% ?- padre(juan, maria).        % ¿Es Juan padre de María?
+% ?- hermano(maria, pedro).     % ¿Son María y Pedro hermanos?
+% ?- abuelo(carlos, ana).       % ¿Es Carlos abuelo de Ana?`,
+                        explanation: 'Prolog permite definir hechos y reglas, luego hacer consultas. El sistema infiere automáticamente las respuestas usando lógica de predicados.'
+                    }
+                ]
+            },
+            concurrent: {
+                title: 'Programación Concurrente - Ejemplos',
+                description: 'La programación concurrente permite ejecutar múltiples procesos simultáneamente.',
+                codes: [
+                    {
+                        title: 'Ejemplo en Go - Goroutines y Channels',
+                        code: `package main
+
+import (
+    "fmt"
+    "sync"
+    "time"
+)
+
+// Función que simula trabajo pesado
+func trabajador(id int, trabajos <-chan int, resultados chan<- int, wg *sync.WaitGroup) {
+    defer wg.Done()
+    
+    for trabajo := range trabajos {
+        fmt.Printf("Trabajador %d procesando trabajo %d\\n", id, trabajo)
+        
+        // Simular trabajo pesado
+        time.Sleep(time.Second)
+        
+        // Enviar resultado
+        resultados <- trabajo * 2
+    }
+}
+
+func main() {
+    const numTrabajos = 5
+    const numTrabajadores = 3
+    
+    // Crear channels
+    trabajos := make(chan int, numTrabajos)
+    resultados := make(chan int, numTrabajos)
+    
+    // WaitGroup para sincronizar trabajadores
+    var wg sync.WaitGroup
+    
+    // Iniciar trabajadores concurrentes
+    for i := 1; i <= numTrabajadores; i++ {
+        wg.Add(1)
+        go trabajador(i, trabajos, resultados, &wg)
+    }
+    
+    // Enviar trabajos
+    for i := 1; i <= numTrabajos; i++ {
+        trabajos <- i
+    }
+    close(trabajos)
+    
+    fmt.Println("Todos los trabajos completados")
+}`,
+                        explanation: 'Este ejemplo muestra concurrencia en Go usando goroutines (hilos ligeros) y channels para comunicación segura entre procesos concurrentes.'
+                    }
+                ]
+            },
+            'event-driven': {
+                title: 'Programación Orientada a Eventos - Ejemplos',
+                description: 'El flujo del programa está controlado por eventos externos como clics, mensajes o señales.',
+                codes: [
+                    {
+                        title: 'Ejemplo en JavaScript - Sistema de Eventos DOM',
+                        code: `// Sistema de eventos para una aplicación web interactiva
+class EventDrivenApp {
+    constructor() {
+        this.setupEventListeners();
+    }
+    
+    // Configurar listeners para eventos del DOM
+    setupEventListeners() {
+        // Evento de clic en botón
+        document.getElementById('submitBtn')?.addEventListener('click', (event) => {
+            this.handleSubmit(event);
+        });
+        
+        // Evento de cambio en input
+        document.getElementById('searchInput')?.addEventListener('input', (event) => {
+            this.handleSearch(event);
+        });
+        
+        // Evento de scroll en ventana
+        window.addEventListener('scroll', (event) => {
+            this.handleScroll(event);
+        });
+        
+        // Eventos de teclado
+        document.addEventListener('keydown', (event) => {
+            this.handleKeyPress(event);
+        });
+    }
+    
+    // Manejador de evento de envío
+    handleSubmit(event) {
+        event.preventDefault();
+        console.log('Formulario enviado');
+        
+        // Disparar evento personalizado
+        this.emitCustomEvent('formSubmitted', {
+            timestamp: new Date(),
+            formData: new FormData(event.target.form)
+        });
+    }
+    
+    // Manejador de búsqueda con debounce
+    handleSearch(event) {
+        clearTimeout(this.searchTimeout);
+        
+        this.searchTimeout = setTimeout(() => {
+            const query = event.target.value;
+            console.log('Buscando:', query);
+        }, 300);
+    }
+    
+    // Función para emitir eventos personalizados
+    emitCustomEvent(eventName, data) {
+        const customEvent = new CustomEvent(eventName, {
+            detail: data,
+            bubbles: true
+        });
+        document.dispatchEvent(customEvent);
+    }
+}
+
+// Inicializar la aplicación orientada a eventos
+document.addEventListener('DOMContentLoaded', () => {
+    new EventDrivenApp();
+});`,
+                        explanation: 'Este ejemplo muestra cómo la programación orientada a eventos responde a diferentes estímulos (clics, teclas, scroll) y cómo los eventos pueden encadenar otras acciones.'
+                    }
+                ]
+            }
+        };
+
+        // Estado de la aplicación
+        let currentUser = null;
+
+        // Funciones principales
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-20 right-4 p-4 rounded-lg shadow-lg z-50 transition-all duration-300 transform translate-x-full ${
+                type === 'success' ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+            }`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 100);
+            
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        function showLoginModal() {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full mx-4">
+                    <h2 class="text-2xl handwriting text-blue-900 mb-6 text-center">Iniciar Sesión</h2>
+                    <form id="loginForm">
+                        <div class="mb-4">
+                            <label class="block typewriter text-gray-700 mb-2">Nombre de usuario:</label>
+                            <input type="text" id="username" class="w-full p-3 border rounded-lg typewriter focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingresa tu nombre de usuario" required>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button type="submit" class="flex-1 bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                                Entrar
+                            </button>
+                            <button type="button" id="cancelLogin" class="flex-1 bg-gray-300 text-gray-700 p-3 rounded-lg hover:bg-gray-400 transition-all duration-300">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            setTimeout(() => {
+                const usernameInput = document.getElementById('username');
+                if (usernameInput) usernameInput.focus();
+            }, 100);
+            
+            // Event listeners
+            const form = modal.querySelector('#loginForm');
+            const cancelBtn = modal.querySelector('#cancelLogin');
+            
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const username = document.getElementById('username').value.trim();
+                if (username) {
+                    currentUser = { username: username };
+                    updateLoginButton(true, username);
+                    document.body.removeChild(modal);
+                    showNotification(`¡Bienvenido, ${username}!`);
+                }
+            });
+            
+            cancelBtn.addEventListener('click', () => {
+                document.body.removeChild(modal);
+            });
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    document.body.removeChild(modal);
+                }
+            });
+        }
+
+        function updateLoginButton(isLoggedIn, username = '') {
+            const loginBtn = document.getElementById('loginBtn');
+            if (loginBtn) {
+                if (isLoggedIn) {
+                    loginBtn.textContent = `Hola, ${username}`;
+                    loginBtn.classList.add('bg-green-600', 'hover:bg-green-700');
+                    loginBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                } else {
+                    loginBtn.textContent = 'Iniciar Sesión';
+                    loginBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                    loginBtn.classList.remove('bg-green-600', 'hover:bg-green-700');
+                }
+            }
+        }
+
+        function showExamples(paradigm) {
+            console.log('Mostrando ejemplos para:', paradigm);
+            
+            const examples = examplesData[paradigm] || {
+                title: 'Ejemplos no disponibles',
+                description: 'Los ejemplos están cargando...',
+                codes: []
+            };
+
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+            modal.innerHTML = `
+                <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                    <div class="p-6 border-b">
+                        <div class="flex justify-between items-center">
+                            <h2 class="text-3xl handwriting text-blue-900">${examples.title}</h2>
+                            <button id="closeExamples" class="text-gray-500 hover:text-gray-700 text-3xl font-bold cursor-pointer">&times;</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="typewriter text-gray-700 mb-6">${examples.description}</p>
+                        <div class="space-y-6">
+                            ${examples.codes.map(code => `
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="text-xl handwriting text-blue-800 mb-3">${code.title}</h3>
+                                    <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto text-sm"><code>${code.code}</code></pre>
+                                    <p class="typewriter text-gray-600 mt-3">${code.explanation}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Cerrar modal
+            const closeBtn = modal.querySelector('#closeExamples');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    if (modal.parentNode) {
+                        document.body.removeChild(modal);
+                    }
+                });
+            }
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    if (modal.parentNode) {
+                        document.body.removeChild(modal);
+                    }
+                }
+            });
+        }
+
+        function renderParadigmsPage() {
+            const mainContent = document.querySelector('main');
+            
+            const paradigmsHTML = `
+                <div class="container mx-auto px-4 py-8">
+                    <div class="text-center mb-12">
+                        <h1 class="text-5xl handwriting text-blue-900 mb-4">Paradigmas de Programación</h1>
+                        <p class="text-xl typewriter text-gray-700 max-w-3xl mx-auto">
+                            Explora los diferentes enfoques y filosofías que han moldeado la forma en que escribimos código
+                        </p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                        ${paradigmsData.map(paradigm => `
+                            <div class="bg-white/80 p-6 rounded-lg shadow-lg card-hover border-l-4 border-${paradigm.color}-500 transform transition-all duration-300 hover:scale-105">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-4 h-4 bg-${paradigm.color}-500 rounded-full mr-3"></div>
+                                    <h2 class="text-xl handwriting text-${paradigm.color}-800">${paradigm.name}</h2>
+                                </div>
+                                <p class="typewriter text-gray-700 mb-6 text-sm leading-relaxed">
+                                    ${paradigm.description}
+                                </p>
+                                <div class="flex space-x-2">
+                                    <button class="example-btn bg-${paradigm.color}-600 text-white px-4 py-2 rounded hover:bg-${paradigm.color}-700 transition-all text-sm" data-paradigm="${paradigm.id}">
+                                        Ver Ejemplos
+                                    </button>
+                                    <button class="detail-btn bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm" data-paradigm="${paradigm.id}">
+                                        Más Info
+                                    </button>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <div class="text-center mt-12">
+                        <button id="backToHome" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all">
+                            ← Volver al Inicio
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            mainContent.innerHTML = paradigmsHTML;
+            
+            // Setup event listeners
+            document.querySelectorAll('.example-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const paradigm = e.target.getAttribute('data-paradigm');
+                    showExamples(paradigm);
+                });
+            });
+
+            document.querySelectorAll('.detail-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const paradigm = e.target.getAttribute('data-paradigm');
+                    showDetailPage(paradigm);
+                });
+            });
+
+            const backBtn = document.getElementById('backToHome');
+            if (backBtn) {
+                backBtn.addEventListener('click', () => {
+                    location.reload();
+                });
+            }
+        }
+
+        // Datos de detalles de paradigmas
+        const detailsData = {
+            structured: {
+                title: 'Programación Estructurada',
+                color: 'blue',
+                description: 'La programación estructurada es un paradigma que enfatiza el uso de estructuras de control bien definidas y evita el uso de instrucciones de salto como GOTO.',
+                characteristics: [
+                    'Uso de estructuras de control: secuencia, selección e iteración',
+                    'Evita el uso de GOTO y saltos incondicionales',
+                    'Código organizado en bloques lógicos',
+                    'Facilita la lectura y mantenimiento del código',
+                    'Promueve la programación top-down'
+                ],
+                advantages: [
+                    'Código más legible y mantenible',
+                    'Facilita la depuración y testing',
+                    'Reduce la complejidad del programa',
+                    'Mejora la productividad del programador'
+                ],
+                languages: ['C', 'Pascal', 'COBOL', 'FORTRAN', 'ALGOL'],
+                useCases: [
+                    'Sistemas embebidos',
+                    'Programas de control industrial',
+                    'Algoritmos matemáticos',
+                    'Sistemas operativos básicos'
+                ]
+            },
+            oop: {
+                title: 'Programación Orientada a Objetos',
+                color: 'green',
+                description: 'Paradigma basado en objetos que encapsulan datos (atributos) y código (métodos), promoviendo la reutilización y modularidad.',
+                characteristics: [
+                    'Encapsulación: agrupa datos y métodos',
+                    'Herencia: permite crear clases derivadas',
+                    'Polimorfismo: mismo método, diferentes comportamientos',
+                    'Abstracción: oculta detalles de implementación'
+                ],
+                advantages: [
+                    'Reutilización de código mediante herencia',
+                    'Modularidad y organización clara',
+                    'Facilita el mantenimiento y escalabilidad',
+                    'Modelado natural de problemas del mundo real'
+                ],
+                languages: ['Java', 'C++', 'C#', 'Python', 'Ruby', 'Kotlin'],
+                useCases: [
+                    'Aplicaciones empresariales',
+                    'Desarrollo de videojuegos',
+                    'Interfaces gráficas de usuario',
+                    'Sistemas de gestión'
+                ]
+            },
+            functional: {
+                title: 'Programación Funcional',
+                color: 'purple',
+                description: 'Paradigma que trata la computación como evaluación de funciones matemáticas, evitando cambios de estado y datos mutables.',
+                characteristics: [
+                    'Funciones como ciudadanos de primera clase',
+                    'Inmutabilidad de datos',
+                    'Funciones puras sin efectos secundarios',
+                    'Recursión en lugar de iteración'
+                ],
+                advantages: [
+                    'Código más predecible y testeable',
+                    'Facilita la paralelización',
+                    'Menos errores relacionados con estado',
+                    'Expresividad y concisión'
+                ],
+                languages: ['Haskell', 'Lisp', 'Clojure', 'F#', 'Erlang', 'Scala'],
+                useCases: [
+                    'Procesamiento de datos masivos',
+                    'Sistemas concurrentes y distribuidos',
+                    'Análisis financiero y científico',
+                    'Inteligencia artificial'
+                ]
+            },
+            reactive: {
+                title: 'Programación Reactiva',
+                color: 'red',
+                description: 'Paradigma orientado a flujos de datos asincrónicos y la propagación automática de cambios a través del sistema.',
+                characteristics: [
+                    'Streams de datos asincrónicos',
+                    'Propagación automática de cambios',
+                    'Composición de operadores',
+                    'Manejo declarativo de eventos'
+                ],
+                advantages: [
+                    'Excelente para aplicaciones en tiempo real',
+                    'Manejo elegante de asincronía',
+                    'Composición declarativa de operaciones',
+                    'Escalabilidad y rendimiento'
+                ],
+                languages: ['RxJS', 'RxJava', 'Reactor', 'Akka Streams'],
+                useCases: [
+                    'Interfaces de usuario reactivas',
+                    'Sistemas de trading en tiempo real',
+                    'IoT y sensores',
+                    'Streaming de datos'
+                ]
+            },
+            procedural: {
+                title: 'Programación Procedural',
+                color: 'indigo',
+                description: 'Paradigma basado en procedimientos o funciones que operan sobre datos, organizando el código en rutinas reutilizables.',
+                characteristics: [
+                    'Organización en procedimientos/funciones',
+                    'Datos y funciones separados',
+                    'Llamadas a procedimientos secuenciales',
+                    'Modularización mediante funciones'
+                ],
+                advantages: [
+                    'Simplicidad conceptual',
+                    'Reutilización de código mediante funciones',
+                    'Fácil de entender y aprender',
+                    'Eficiente para problemas algorítmicos'
+                ],
+                languages: ['C', 'Pascal', 'FORTRAN', 'COBOL', 'Go'],
+                useCases: [
+                    'Sistemas embebidos',
+                    'Algoritmos matemáticos',
+                    'Herramientas de línea de comandos',
+                    'Sistemas operativos'
+                ]
+            },
+            declarative: {
+                title: 'Programación Declarativa',
+                color: 'pink',
+                description: 'Enfoque que describe qué se quiere lograr sin especificar cómo hacerlo, dejando los detalles de implementación al sistema.',
+                characteristics: [
+                    'Describe el "qué" no el "cómo"',
+                    'Alto nivel de abstracción',
+                    'Menos control sobre la ejecución',
+                    'Expresividad y concisión'
+                ],
+                advantages: [
+                    'Código más expresivo y legible',
+                    'Menos propenso a errores',
+                    'Facilita el mantenimiento',
+                    'Permite optimizaciones automáticas'
+                ],
+                languages: ['SQL', 'HTML/CSS', 'Prolog', 'XSLT'],
+                useCases: [
+                    'Consultas de bases de datos',
+                    'Configuración de sistemas',
+                    'Transformación de documentos',
+                    'Interfaces de usuario'
+                ]
+            },
+            imperative: {
+                title: 'Programación Imperativa',
+                color: 'yellow',
+                description: 'Paradigma que describe cómo realizar tareas paso a paso mediante instrucciones explícitas que cambian el estado del programa.',
+                characteristics: [
+                    'Instrucciones secuenciales explícitas',
+                    'Cambio de estado mediante asignaciones',
+                    'Control de flujo explícito',
+                    'Variables mutables'
+                ],
+                advantages: [
+                    'Control total sobre la ejecución',
+                    'Eficiencia y optimización directa',
+                    'Fácil mapeo a arquitectura de hardware',
+                    'Debugging intuitivo'
+                ],
+                languages: ['C', 'C++', 'Java', 'Python', 'JavaScript'],
+                useCases: [
+                    'Sistemas de bajo nivel',
+                    'Algoritmos de rendimiento crítico',
+                    'Controladores de hardware',
+                    'Juegos en tiempo real'
+                ]
+            },
+            logic: {
+                title: 'Programación Lógica',
+                color: 'teal',
+                description: 'Paradigma basado en lógica formal, usando hechos y reglas para resolver problemas mediante inferencia automática.',
+                characteristics: [
+                    'Basado en lógica de predicados',
+                    'Hechos y reglas como base del programa',
+                    'Inferencia automática',
+                    'Backtracking para encontrar soluciones'
+                ],
+                advantages: [
+                    'Expresión natural de problemas lógicos',
+                    'Búsqueda automática de soluciones',
+                    'Código muy conciso',
+                    'Excelente para IA y sistemas expertos'
+                ],
+                languages: ['Prolog', 'Mercury', 'Datalog'],
+                useCases: [
+                    'Sistemas expertos',
+                    'Procesamiento de lenguaje natural',
+                    'Bases de datos deductivas',
+                    'Verificación formal'
+                ]
+            },
+            concurrent: {
+                title: 'Programación Concurrente',
+                color: 'orange',
+                description: 'Paradigma para ejecutar múltiples procesos simultáneamente y coordinar su interacción de manera segura y eficiente.',
+                characteristics: [
+                    'Ejecución simultánea de procesos',
+                    'Sincronización y comunicación entre procesos',
+                    'Manejo de recursos compartidos',
+                    'Prevención de condiciones de carrera'
+                ],
+                advantages: [
+                    'Mejor utilización de recursos',
+                    'Mayor rendimiento en sistemas multi-core',
+                    'Responsividad en aplicaciones interactivas',
+                    'Escalabilidad horizontal'
+                ],
+                languages: ['Go', 'Erlang', 'Java (threads)', 'C# (async/await)', 'Rust'],
+                useCases: [
+                    'Servidores web de alto rendimiento',
+                    'Sistemas distribuidos',
+                    'Procesamiento paralelo',
+                    'Aplicaciones en tiempo real'
+                ]
+            },
+            'event-driven': {
+                title: 'Programación Orientada a Eventos',
+                color: 'cyan',
+                description: 'Paradigma donde el flujo del programa está determinado por eventos externos como clics, mensajes o señales del sistema.',
+                characteristics: [
+                    'Flujo controlado por eventos',
+                    'Event loops y manejadores',
+                    'Arquitectura asíncrona',
+                    'Desacoplamiento de componentes'
+                ],
+                advantages: [
+                    'Interfaces de usuario responsivas',
+                    'Arquitectura flexible y modular',
+                    'Escalabilidad para I/O intensivo',
+                    'Desacoplamiento de componentes'
+                ],
+                languages: ['JavaScript', 'Node.js', 'C# (events)', 'Java (listeners)'],
+                useCases: [
+                    'Interfaces gráficas de usuario',
+                    'Aplicaciones web interactivas',
+                    'Sistemas de notificaciones',
+                    'Juegos en tiempo real'
+                ]
+            }
+        };
+
+        function showDetailPage(paradigm) {
+            console.log('Mostrando detalles para:', paradigm);
+            
+            const details = detailsData[paradigm] || {
+                title: 'Detalles no disponibles',
+                color: 'gray',
+                description: 'Los detalles están cargando...',
+                characteristics: [],
+                advantages: [],
+                languages: [],
+                useCases: []
+            };
+
+            const mainContent = document.querySelector('main');
+            
+            const detailHTML = `
+                <div class="container mx-auto px-4 py-8">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="mb-8">
+                            <button id="backToParadigms" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all mb-4">
+                                ← Volver a Paradigmas
+                            </button>
+                            <h1 class="text-5xl handwriting text-${details.color}-900 mb-4">${details.title}</h1>
+                            <p class="text-xl typewriter text-gray-700 leading-relaxed">${details.description}</p>
+                        </div>
+                        
+                        <div class="space-y-8">
+                            <div class="bg-white/80 p-6 rounded-lg shadow-lg">
+                                <h2 class="text-3xl handwriting text-${details.color}-800 mb-4">Características Principales</h2>
+                                <ul class="typewriter text-gray-700 space-y-2">
+                                    ${details.characteristics.map(char => `<li class="flex items-start"><span class="text-${details.color}-500 mr-2">•</span>${char}</li>`).join('')}
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white/80 p-6 rounded-lg shadow-lg">
+                                <h2 class="text-3xl handwriting text-${details.color}-800 mb-4">Ventajas</h2>
+                                <ul class="typewriter text-gray-700 space-y-2">
+                                    ${details.advantages.map(adv => `<li class="flex items-start"><span class="text-green-500 mr-2">✓</span>${adv}</li>`).join('')}
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white/80 p-6 rounded-lg shadow-lg">
+                                <h2 class="text-3xl handwriting text-${details.color}-800 mb-4">Lenguajes Populares</h2>
+                                <div class="flex flex-wrap gap-2">
+                                    ${details.languages.map(lang => `<span class="bg-${details.color}-100 text-${details.color}-800 px-3 py-1 rounded-full text-sm">${lang}</span>`).join('')}
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white/80 p-6 rounded-lg shadow-lg">
+                                <h2 class="text-3xl handwriting text-${details.color}-800 mb-4">Casos de Uso</h2>
+                                <ul class="typewriter text-gray-700 space-y-2">
+                                    ${details.useCases.map(use => `<li class="flex items-start"><span class="text-${details.color}-500 mr-2">→</span>${use}</li>`).join('')}
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button class="example-btn bg-${details.color}-600 text-white px-6 py-3 rounded-lg hover:bg-${details.color}-700 transition-all" data-paradigm="${paradigm}">
+                                    Ver Ejemplos de Código
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            mainContent.innerHTML = detailHTML;
+            
+            // Setup event listeners
+            const backBtn = document.getElementById('backToParadigms');
+            if (backBtn) {
+                backBtn.addEventListener('click', () => {
+                    renderParadigmsPage();
+                });
+            }
+            
+            const exampleBtn = document.querySelector('.example-btn');
+            if (exampleBtn) {
+                exampleBtn.addEventListener('click', (e) => {
+                    const paradigm = e.target.getAttribute('data-paradigm');
+                    showExamples(paradigm);
+                });
+            }
+        }
+
+        // Event listeners principales
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginBtn = document.getElementById('loginBtn');
+            const startBtn = document.getElementById('startBtn');
+
+            if (loginBtn) {
+                loginBtn.addEventListener('click', () => {
+                    if (currentUser) {
+                        currentUser = null;
+                        updateLoginButton(false);
+                        showNotification('Sesión cerrada correctamente');
+                    } else {
+                        showLoginModal();
+                    }
+                });
+            }
+
+            if (startBtn) {
+                startBtn.addEventListener('click', () => {
+                    if (!currentUser) {
+                        showNotification('Por favor, inicia sesión primero', 'error');
+                        showLoginModal();
+                        return;
+                    }
+                    renderParadigmsPage();
+                    showNotification('¡Comenzando la exploración!');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

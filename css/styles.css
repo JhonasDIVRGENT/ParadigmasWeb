@@ -1,0 +1,247 @@
+/* Fuentes personalizadas */
+.handwriting {
+    font-family: 'Dancing Script', cursive;
+}
+
+.typewriter {
+    font-family: 'Courier Prime', monospace;
+}
+
+/* Fondo de cuaderno */
+.notebook-bg {
+    background-color: #f8f9fa;
+    background-image: 
+        linear-gradient(90deg, #e3f2fd 1px, transparent 1px),
+        linear-gradient(180deg, #e3f2fd 1px, transparent 1px),
+        linear-gradient(90deg, #bbdefb 1px, transparent 1px);
+    background-size: 20px 20px, 20px 20px, 100px 100px;
+    background-position: 0 0, 0 0, 0 0;
+}
+
+/* Líneas del cuaderno más sutiles */
+.notebook-bg::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 24px,
+        #e1f5fe 24px,
+        #e1f5fe 26px
+    );
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Margen izquierdo del cuaderno */
+.notebook-bg::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 80px;
+    bottom: 0;
+    width: 2px;
+    background-color: #f48fb1;
+    z-index: -1;
+}
+
+/* Animaciones */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out;
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out;
+}
+
+/* Efectos hover para tarjetas */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Navegación suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enlaces de navegación */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botones con efecto de escritura */
+.btn-typewriter {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-typewriter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-typewriter:hover::before {
+    left: 100%;
+}
+
+/* Efectos de papel */
+.paper-effect {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.06),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Animación de máquina de escribir para texto */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #2563eb; }
+}
+
+.typing-animation {
+    overflow: hidden;
+    border-right: 3px solid #2563eb;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .notebook-bg::after {
+        left: 40px;
+    }
+    
+    .handwriting {
+        font-size: 0.9em;
+    }
+    
+    .typewriter {
+        font-size: 0.85em;
+    }
+}
+
+/* Estados de carga */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Transiciones suaves para cambios de página */
+.page-transition {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-enter {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.page-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.page-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.page-exit-active {
+    opacity: 0;
+    transform: translateX(-100px);
+}
